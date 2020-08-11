@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gV-rs-mcG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-3i-gDw">
+                                        <rect key="frame" x="24" y="52" width="366" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-oV-37l">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="34" id="QLf-aC-V0t"/>
+                                                </constraints>
+                                                <state key="normal" image="bookmark.fill" catalog="system"/>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m9I-eE-pTW">
+                                                <rect key="frame" x="38" y="0.0" width="290" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-c7-f6b">
+                                                <rect key="frame" x="332" y="0.0" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="34" id="Xgy-Sx-rbi"/>
+                                                </constraints>
+                                                <state key="normal" image="book.fill" catalog="system"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="MCg-7O-WGT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EXt-OO-c69">
+                                        <rect key="frame" x="24" y="820" width="366" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBb-wY-ImA">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="34"/>
+                                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="goBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hd7-Qv-CoA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Em-mg-31r">
+                                                <rect key="frame" x="123.5" y="0.0" width="119" height="34"/>
+                                                <state key="normal" image="square.and.arrow.up.fill" catalog="system"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etB-1N-XTN">
+                                                <rect key="frame" x="246.5" y="0.0" width="119.5" height="34"/>
+                                                <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="goFoward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Vl-q1-UXH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="2sd-Rc-bLz"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="TAU-8i-4s2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2F-yC-iLf">
+                                        <rect key="frame" x="8" y="90" width="398" height="722"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BBP-3i-gDw" firstAttribute="leading" secondItem="8gV-rs-mcG" secondAttribute="leading" constant="24" id="1up-h9-bBt"/>
+                                    <constraint firstItem="EXt-OO-c69" firstAttribute="top" secondItem="A2F-yC-iLf" secondAttribute="bottom" constant="8" id="3Dh-5Y-5GW"/>
+                                    <constraint firstAttribute="trailing" secondItem="EXt-OO-c69" secondAttribute="trailing" constant="24" id="EyN-gY-6di"/>
+                                    <constraint firstItem="A2F-yC-iLf" firstAttribute="top" secondItem="BBP-3i-gDw" secondAttribute="bottom" constant="4" id="LMl-Ke-Kzg"/>
+                                    <constraint firstItem="A2F-yC-iLf" firstAttribute="leading" secondItem="8gV-rs-mcG" secondAttribute="leading" constant="8" id="QHU-eM-4xn"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="EXt-OO-c69" secondAttribute="bottom" id="WeL-ti-NRe"/>
+                                    <constraint firstAttribute="trailing" secondItem="BBP-3i-gDw" secondAttribute="trailing" constant="24" id="kbb-n0-CQm"/>
+                                    <constraint firstAttribute="trailing" secondItem="A2F-yC-iLf" secondAttribute="trailing" constant="8" id="yN3-WT-cYB"/>
+                                    <constraint firstItem="EXt-OO-c69" firstAttribute="leading" secondItem="8gV-rs-mcG" secondAttribute="leading" constant="24" id="ziS-s5-3Ru"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8gV-rs-mcG" secondAttribute="bottom" id="FOZ-ht-MHF"/>
+                            <constraint firstItem="8gV-rs-mcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IxH-cH-dq1"/>
+                            <constraint firstItem="BBP-3i-gDw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="MTH-LS-gzU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8gV-rs-mcG" secondAttribute="trailing" id="fJZ-4V-WHi"/>
+                            <constraint firstItem="8gV-rs-mcG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mdE-b5-3SP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="browser" destination="A2F-yC-iLf" id="Jho-Ge-XmI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
+        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
