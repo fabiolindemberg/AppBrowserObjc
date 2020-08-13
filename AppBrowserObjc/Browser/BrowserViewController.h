@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@interface ViewController : UIViewController
+@interface BrowserViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet WKWebView *browser;
+@property (weak, nonatomic) IBOutlet UIButton *btnFavorite;
+@property (weak, nonatomic) IBOutlet UIButton *btnFavoriteList;
+@property (weak, nonatomic) IBOutlet UITextField *tfAddress;
 @end
 

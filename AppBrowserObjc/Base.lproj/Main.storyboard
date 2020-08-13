@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Browser View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BrowserViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,12 +26,15 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="34" id="QLf-aC-V0t"/>
                                                 </constraints>
-                                                <state key="normal" image="bookmark.fill" catalog="system"/>
+                                                <state key="normal" image="bookmark" catalog="system"/>
+                                                <connections>
+                                                    <action selector="favorite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bI9-Kc-pWQ"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m9I-eE-pTW">
                                                 <rect key="frame" x="38" y="0.0" width="290" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go" textContentType="url"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-c7-f6b">
                                                 <rect key="frame" x="332" y="0.0" width="34" height="34"/>
@@ -39,6 +42,9 @@
                                                     <constraint firstAttribute="width" constant="34" id="Xgy-Sx-rbi"/>
                                                 </constraints>
                                                 <state key="normal" image="book.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="showFavoriteList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t7J-9S-MWO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -107,18 +113,61 @@
                     </view>
                     <connections>
                         <outlet property="browser" destination="A2F-yC-iLf" id="Jho-Ge-XmI"/>
+                        <outlet property="btnFavorite" destination="bpT-oV-37l" id="U7D-yO-8TR"/>
+                        <outlet property="btnFavoriteList" destination="nMI-c7-f6b" id="jZJ-SC-cIb"/>
+                        <outlet property="tfAddress" destination="m9I-eE-pTW" id="qJS-C9-p2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </scene>
+        <!--Favorite List View Controller-->
+        <scene sceneID="9UF-IH-bMV">
+            <objects>
+                <tableViewController storyboardIdentifier="FavoriteListView" id="T8K-sH-1Jj" customClass="FavoriteListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cfh-cE-Cig">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="m6X-Fi-UEV" style="IBUITableViewCellStyleDefault" id="GTt-Pr-ffL">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GTt-Pr-ffL" id="PF1-fJ-WHR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m6X-Fi-UEV">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.8980392157" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T8K-sH-1Jj" id="QZg-bk-cX2"/>
+                            <outlet property="delegate" destination="T8K-sH-1Jj" id="zZW-ty-7WM"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tbFavorites" destination="Cfh-cE-Cig" id="diY-xA-Mmm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCm-GJ-YSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="107"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="book.fill" catalog="system" width="128" height="100"/>
-        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
     </resources>
 </document>

@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		499E747124DF3C530036DC11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 499E747024DF3C530036DC11 /* AppDelegate.m */; };
 		499E747424DF3C530036DC11 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 499E747324DF3C530036DC11 /* SceneDelegate.m */; };
-		499E747724DF3C530036DC11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499E747624DF3C530036DC11 /* ViewController.m */; };
+		499E747724DF3C530036DC11 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499E747624DF3C530036DC11 /* BrowserViewController.m */; };
 		499E747A24DF3C530036DC11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E747824DF3C530036DC11 /* Main.storyboard */; };
 		499E747C24DF3C560036DC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499E747B24DF3C560036DC11 /* Assets.xcassets */; };
 		499E747F24DF3C560036DC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E747D24DF3C560036DC11 /* LaunchScreen.storyboard */; };
 		499E748224DF3C560036DC11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 499E748124DF3C560036DC11 /* main.m */; };
 		499E748C24DF3C560036DC11 /* AppBrowserObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 499E748B24DF3C560036DC11 /* AppBrowserObjcTests.m */; };
+		49ADDCB124E5B9850047CB48 /* FavoriteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADDCB024E5B9850047CB48 /* FavoriteListViewController.m */; };
 		49E1660D24E23162009CFADA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E1660C24E23161009CFADA /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +35,8 @@
 		499E747024DF3C530036DC11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		499E747224DF3C530036DC11 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		499E747324DF3C530036DC11 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		499E747524DF3C530036DC11 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		499E747624DF3C530036DC11 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		499E747524DF3C530036DC11 /* BrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		499E747624DF3C530036DC11 /* BrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 		499E747924DF3C530036DC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		499E747B24DF3C560036DC11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		499E747E24DF3C560036DC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +45,8 @@
 		499E748724DF3C560036DC11 /* AppBrowserObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBrowserObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		499E748B24DF3C560036DC11 /* AppBrowserObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppBrowserObjcTests.m; sourceTree = "<group>"; };
 		499E748D24DF3C560036DC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49ADDCAF24E5B9850047CB48 /* FavoriteListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteListViewController.h; sourceTree = "<group>"; };
+		49ADDCB024E5B9850047CB48 /* FavoriteListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteListViewController.m; sourceTree = "<group>"; };
 		49E1660C24E23161009CFADA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -89,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				499E749624DF3C7C0036DC11 /* Application */,
-				499E747524DF3C530036DC11 /* ViewController.h */,
-				499E747624DF3C530036DC11 /* ViewController.m */,
+				49ADDCAD24E5B8CF0047CB48 /* Browser */,
+				49ADDCAE24E5B94E0047CB48 /* Favorite */,
 				499E747824DF3C530036DC11 /* Main.storyboard */,
 			);
 			path = AppBrowserObjc;
@@ -118,6 +121,24 @@
 				499E748124DF3C560036DC11 /* main.m */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		49ADDCAD24E5B8CF0047CB48 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				499E747524DF3C530036DC11 /* BrowserViewController.h */,
+				499E747624DF3C530036DC11 /* BrowserViewController.m */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		49ADDCAE24E5B94E0047CB48 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				49ADDCAF24E5B9850047CB48 /* FavoriteListViewController.h */,
+				49ADDCB024E5B9850047CB48 /* FavoriteListViewController.m */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		49E1660B24E23161009CFADA /* Frameworks */ = {
@@ -228,8 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499E747724DF3C530036DC11 /* ViewController.m in Sources */,
+				499E747724DF3C530036DC11 /* BrowserViewController.m in Sources */,
 				499E747124DF3C530036DC11 /* AppDelegate.m in Sources */,
+				49ADDCB124E5B9850047CB48 /* FavoriteListViewController.m in Sources */,
 				499E748224DF3C560036DC11 /* main.m in Sources */,
 				499E747424DF3C530036DC11 /* SceneDelegate.m in Sources */,
 			);
